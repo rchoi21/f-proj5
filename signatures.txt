@@ -1,0 +1,74 @@
+#light
+
+
+
+
+
+namespace ImageLibrary
+  module Operations = begin
+    val grayscaleProcessTL :
+      list:(int * int * int) list ->
+        tupleList:(int * int * int) list -> (int * int * int) list
+    val grayscaleProcessLL :
+      image:(int * int * int) list list ->
+        newImg:(int * int * int) list list -> (int * int * int) list list
+    val Grayscale :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val thresholdProcessTL :
+      list:(int * int * int) list ->
+        tupleList:(int * int * int) list ->
+          threshold:int -> (int * int * int) list
+    val thresholdProcessLL :
+      image:(int * int * int) list list ->
+        newImg:(int * int * int) list list ->
+          threshold:int -> (int * int * int) list list
+    val Threshold :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val flipHorizontalProcessLL :
+      image:(int * int * int) list list ->
+        newImg:(int * int * int) list list -> (int * int * int) list list
+    val FlipHorizontal :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val findPixDiff :
+      r1:int * g1:int * b1:int -> r2:int * g2:int * b2:int -> float
+    val findEdges :
+      tupleList1:(int * int * int) list ->
+        tupleList2:(int * int * int) list ->
+          edgList:(int * int * int) list ->
+            threshold:int -> (int * int * int) list
+    val makeEdgeImg :
+      image:(int * int * int) list list ->
+        edgeImg:(int * int * int) list list ->
+          threshold:int -> (int * int * int) list list
+    val EdgeDetect :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val colListImg :
+      image:(int * int * int) list list ->
+        tailImg:(int * int * int) list list -> (int * int * int) list list
+    val getColumnList :
+      image:(int * int * int) list list ->
+        list:(int * int * int) list -> (int * int * int) list
+    val makeRotatedImg :
+      image:(int * int * int) list list ->
+        rotatedImg:(int * int * int) list list -> (int * int * int) list list
+    val RotateRight90 :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+  end
+
